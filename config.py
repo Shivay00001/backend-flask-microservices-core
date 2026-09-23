@@ -16,6 +16,7 @@ class DevelopmentConfig(Config):
 class TestingConfig(Config):
     TESTING = True
     SQLALCHEMY_DATABASE_URI = 'sqlite:///:memory:'
+    task_always_eager = True  # run celery tasks synchronously in tests (no Redis needed)
 
 class ProductionConfig(Config):
     pass

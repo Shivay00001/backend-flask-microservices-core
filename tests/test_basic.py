@@ -4,6 +4,8 @@ from app.models.user import User
 
 @pytest.fixture
 def app():
+    from celery import current_app
+    current_app.conf.task_always_eager = True  # no Redis needed in tests
     app = create_app('testing')
     with app.app_context():
         db.create_all()

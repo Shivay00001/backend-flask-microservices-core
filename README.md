@@ -35,11 +35,24 @@ Follow standard installation steps for `Python` to set up the project locally:
    ```bash
    cd backend-flask-microservices-core
    ```
-3. Install dependencies according to the standard `Python` ecosystem.
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Configure environment:
+   ```bash
+   cp .env.example .env
+   ```
 
 ## 💻 Usage
 
-Run the project using standard execution commands for `Python`. Ensure all environment variables and configurations are set prior to execution.
+```bash
+# Run the API server
+gunicorn -w 4 -b 0.0.0.0:5000 wsgi:app
+
+# Run tests
+pytest tests/
+```
 
 ## 🤝 Contributing
 
