@@ -1,5 +1,7 @@
 # Backend Flask Microservices Core
 
+Built by [VisionQuantech](https://visionquantech.com) — AI agents, apps & tools for small businesses.
+
 Flask microservices core with Go gateway, Docker, and CI/CD pipeline
 
 ![Language](https://img.shields.io/badge/Language-Python-blue)
